@@ -14,5 +14,4 @@ export class Notification {
 
   @ManyToOne(() => User, (user) => user.id)
   user: User;
-  
 }

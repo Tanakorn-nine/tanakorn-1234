@@ -14,5 +14,4 @@ export class Category {
 
   @ManyToOne(() => User, (user) => user.id)
   user: User;
-  
 }

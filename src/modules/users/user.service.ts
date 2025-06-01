@@ -32,10 +32,10 @@ export class UsersService {
   async findAll() {
     const user = await this.repo.find();
     return user.map((u) => {
-      return{
+      return {
         ...u,
-        password: undefined
-      }
+        password: undefined,
+      };
     });
   }
 
@@ -43,8 +43,8 @@ export class UsersService {
     const user = await this.repo.findOneBy({ id });
     return {
       ...user,
-      password: undefined
-    }
+      password: undefined,
+    };
   }
 
   findByEmail(email: string) {
