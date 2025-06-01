@@ -1,16 +1,16 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { User } from './user.entity';
 
-@Entity({ name: 'category' })
-export class Category {
+@Entity({ name: 'notification' })
+export class Notification {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column({ unique: true })
-  name: string;
+  title: string;
 
   @Column()
-  type: string;
+  content: string;
 
   @ManyToOne(() => User, (user) => user.id)
   user: User;
